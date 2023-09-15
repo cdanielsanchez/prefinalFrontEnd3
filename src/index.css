@@ -36,7 +36,7 @@ nav {
 a {
   color: #000;
   cursor: pointer;
-  margin: 15px;
+  margin: 5px;
  
   text-decoration: none;
 }
@@ -70,10 +70,10 @@ footer > p {
 form {
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 140px;
   justify-content: space-around;
   margin: 0 auto;
-  width: 300px;
+  width: 390px;
 }
 
 .card {
@@ -81,8 +81,8 @@ form {
   border: 0.5px solid rgb(136, 136, 136);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+ 
+  padding: 0.5rem; 
   width: 200px;
 }
 
@@ -134,10 +134,10 @@ tr:nth-child(even) {
 
 /* nuestros css */
 
-.navbar-container{
+/* .navbar-container{
   display: flex;
   justify-content: center ;
-}
+} */
 
 img{
   max-height: 50px;
@@ -151,3 +151,80 @@ img{
   
 }
 
+#contacto{
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-group {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  flex-basis: 40%; /* Ajusta el ancho del label según tu preferencia */
+  margin-right: 10px; /* Espacio entre el label y el input */
+  text-align: right;
+}
+
+.form-group input {
+  flex-basis: 60%; /* Ajusta el ancho del input según tu preferencia */
+}
+
+#h1home{
+  margin-top: 0px;
+}
+
+.card-image {
+  
+  border-radius: 8px; /* Añade bordes redondeados a la imagen */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a la imagen */
+  max-height: calc(100% - 40px);  /* Ocupa el 100% del alto menos el espacio de los datos */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  width: 100%; /* Ocupa el 100% del ancho dentro de la tarjeta */
+}
+
+.card-image img {
+  flex-grow: 3;
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+  width: 100%; /* Ajusta el ancho de la imagen al 100% */
+}
+
+/* Estilo para los datos en la tarjeta */
+.card-data {
+  
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Permite que la parte de abajo ocupe el espacio restante */
+  justify-content: space-between;
+  margin-top: 10px; /* Espacio entre la imagen y los datos */
+  text-align: center;
+  width: 100%; /* Ocupa el 100% del ancho dentro de la tarjeta */
+}
+
+/* Estilos para el Navbar */
+.navbar-container {
+  align-items: center; /* Alinea verticalmente los elementos */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Cambia a space-between para separar el título del Navbar */
+  padding: 1rem;
+  width: 80vw;
+}
+
+.navbar-left {
+  font-size: 1.5rem;
+  /* Estilos para el título en el lado izquierdo */
+  font-weight: bold;
+}
+.navbar-right {
+  align-items: center;
+  display: flex;
+}

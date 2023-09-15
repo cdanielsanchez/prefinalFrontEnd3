@@ -33,16 +33,20 @@ const Navbar = () => {
 
 
   return (
-     <div className='navbar-container'>
-     <nav className={state.theme}   style ={navbarStyle}>
+    <nav className={state.theme}   style ={navbarStyle}>
+       <div className='navbar-container'>
+        <div className="navbar-left">
+          <Link to="/">Clinica Benitez y Sanchez</Link>
+        </div>
          {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-        <p><Link to="/home">Home</Link></p>
-        <p><Link to="/contacto">Contacto</Link></p>
-        <p><Link to="/favs" >Favoritos</Link></p>
+         <div className="navbar-right">
+          <p><Link to="/home">Home</Link></p>
+          <p><Link to="/contacto">Contacto</Link></p>
+          <p><Link to="/favs" >Favoritos</Link></p>
    
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       
-      <button className={state.theme}  onClick={cambiarTheme} style ={navbarStyle} id='miboton'>
+          <button className={state.theme}  onClick={cambiarTheme} style ={navbarStyle} id='miboton'>
 
       {state.theme === "dark" ? (
             <FontAwesomeIcon icon={faSun} />
@@ -52,8 +56,9 @@ const Navbar = () => {
       
       </button>
       {/* <p>Tema actual: {state.theme}</p>  */}
-    </nav>
+      </div>
     </div>
+  </nav>
   
   )
 

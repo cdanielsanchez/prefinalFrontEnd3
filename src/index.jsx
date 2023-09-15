@@ -7,7 +7,7 @@ import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import Home from "./Routes/Home";
-
+import Navbar from './Components/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,13 +15,13 @@ root.render(
    <BrowserRouter>
    <Routes>
          <Route path="/" element={<App/>}>
-              <Route path='/home' index element={<Home/>}/>
+              <Route index element={<Home />} /> 
+              <Route path='/home' element={<Home/>}/>
               <Route path='/contacto' element={<Contact/>}/>
               <Route path='/favs' element={<Favs/>}/>  
-              <Route path="/dentist/:id" element={<Detail/>}/>
+              <Route path='/dentist/:id' element={<Detail/>}/>
          </Route>
    </Routes>
-  </BrowserRouter>
+   </BrowserRouter>
   </React.StrictMode>
 );
-

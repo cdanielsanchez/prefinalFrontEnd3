@@ -16,11 +16,13 @@ const Home = () => {
 
   return (
     <main className={state.theme}>
-    <h1>Home</h1>
+    <h1 id="h1home">Home</h1>
     <div className='card-grid'>
       {/* Mapear los datos de los dentistas y renderizar las cards */}
       {state.data.map((dentist) => (
-        <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} />
+       /*  <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} /> */
+         <Card name={dentist.name} username={dentist.username} id={dentist.id} />
+
       ))}
     </div>
   </main>
