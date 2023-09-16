@@ -14,11 +14,20 @@ const reducer = (state, action) => {
       return { ...state, theme: state.theme === "light" ? "dark" : "light" };
     case "DATA":
       return { ...state, data: action.payload };
-    case "ADD_FAV":
-      // Agrega un dentista a favoritos
-      return { ...state, favs: [...state.favs, action.payload] };
-    default:
-      return state;
+      case "ADD_FAV":
+        // Agrega un dentista a favoritos
+        const updatedFavs = [...state.favs, action.payload];
+        localStorage.setItem("favs", JSON.stringify(updatedFavs)); // Guarda en localStorage
+        return { ...state, favs: updatedFavs };
+  
+      case "REMOVE_FAV":
+        // Remueve un dentista de favoritos
+        const filteredFavs = state.favs.filter((fav) => fav.id !== action.payload);
+        localStorage.setItem("favs", JSON.stringify(filteredFavs)); // Guarda en localStorage
+        return { ...state, favs: filteredFavs };
+  
+      default:
+        return state;
   }
 };
 

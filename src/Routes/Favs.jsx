@@ -6,8 +6,11 @@ const Favs = () => {
   const { contextValue } = useContext(ContextGlobal);
   const { state } = contextValue;
 
+
+
   return (
-    <div>
+
+    <div className={state.theme} id="fav-container">
       <h1>Dentistas Favoritos</h1>
       <div className="card-grid">
         {state.favs.map((dentista) => (

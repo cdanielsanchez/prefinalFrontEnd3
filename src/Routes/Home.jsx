@@ -21,7 +21,7 @@ const Home = () => {
       {/* Mapear los datos de los dentistas y renderizar las cards */}
       {state.data.map((dentist) => (
        /*  <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} /> */
-         <Card name={dentist.name} username={dentist.username} id={dentist.id} />
+         <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} />
 
       ))}
     </div>

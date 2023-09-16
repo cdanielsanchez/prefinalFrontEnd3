@@ -7,7 +7,7 @@ import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import Home from "./Routes/Home";
-import Navbar from './Components/Navbar';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

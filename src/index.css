@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
+  margin: 0 auto;
 }
 
 code {
@@ -14,7 +14,7 @@ code {
 }
 
 .favButton {
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: rgba(87, 83, 83, 0.5);
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -26,10 +26,11 @@ h1 {
 }
 
 nav {
+  align-items: center;
   display: flex;
   justify-content: flex-end;
   justify-items: center;
-  padding: 1rem;
+  margin: 0 auto;
   width: 80vw;
 }
 
@@ -46,15 +47,19 @@ a:hover {
 }
 
 footer {
-  bottom: 0;
+  /* bottom: 10px; */
   display: flex;
-  height: 40px;
-  justify-content: center;
-  margin-top: 2rem;
-  padding: 2rem;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-bottom: 1%;
+  /* margin-top: 2rem; */
+  /* padding: 2rem; */
   position: relative;
   text-align: center;
-  width: 90%;
+ /*  width: 90%; */
+  width: 80vw;
 }
 
 footer > img {
@@ -64,7 +69,7 @@ footer > img {
 
 footer > p {
   margin: 0;
-  padding-top: 0.7rem;
+  /* padding-top: 0.7rem; */
 }
 
 form {
@@ -81,8 +86,8 @@ form {
   border: 0.5px solid rgb(136, 136, 136);
   display: flex;
   flex-direction: column;
- 
-  padding: 0.5rem; 
+  justify-content: space-around;
+  padding: 0.5rem 0.5rem 0 0.5rem; 
   width: 200px;
 }
 
@@ -97,7 +102,12 @@ form {
   height: auto;
   justify-content: space-evenly;
   margin: 0 auto;
-  width: 90vw;
+  width: 80vw;
+}
+
+main{
+  margin: 0 auto;
+  width: 80vw;
 }
 
 table {
@@ -120,6 +130,11 @@ tr:nth-child(even) {
 }
 
 /* Estilos específicos para el tema oscuro */
+.light {
+  background-color: #fff;
+  color: #000;
+}
+
 .dark {
   background-color: #12121296;
   color: white;
@@ -134,10 +149,10 @@ tr:nth-child(even) {
 
 /* nuestros css */
 
-/* .navbar-container{
+.navbar-container{
+  align-items: center ;
   display: flex;
-  justify-content: center ;
-} */
+} 
 
 img{
   max-height: 50px;
@@ -156,7 +171,10 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
   text-align: center;
+  width: 80vw;
+
 }
 
 .form-group {
@@ -228,3 +246,21 @@ img{
   align-items: center;
   display: flex;
 }
+
+.detail{
+  margin: 0 auto;
+  padding: 0 60px;
+  width: 80vw;
+}
+
+#fav-container, #detail-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: auto;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 80vw;
+
+}
+

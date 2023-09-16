@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../index.css"
+import Swal from 'sweetalert2';
 
 
 const Form = () => {
@@ -32,14 +33,28 @@ const Form = () => {
       //limpiando
       setNombre("");
       setEmail("");
-      alert ("Gracias  " + nombre +", te contactaremos cuanto antes vía mail")
+      /* alert ("Gracias  " + nombre +", te contactaremos cuanto antes vía mail") */
+      Swal.fire({
+        title: 'Gracias!',
+        text:`Gracias ${nombre}, te contactaremos cuanto antes vía mail.`,
+        icon:'success',
+        showConfirmButton: false,
+        timer: 2600
+      })
       // Limpiar el mensaje de error si había uno previamente
       setError(null);
       // Limpiar el mensaje de éxito si había uno previamente
       setSuccessMessage("");
     }
     else{
-      alert ("Por favor verifique su información nuevamente")
+      /* alert ("Por favor verifique su información nuevamente") */
+      Swal.fire({
+        title: 'Error!',
+        text:`Por favor verifique su información nuevamente.`,
+        icon:'error',
+        showConfirmButton: false,
+        timer: 2600
+      })
       // Limpiar el mensaje de éxito si había uno previamente
       setSuccessMessage("");
 
